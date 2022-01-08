@@ -1,26 +1,25 @@
 const { Colors } = require('@blueprintjs/core')
 
-let names = new Set(Object.keys(Colors).map((key) => key.replace(/\d$/g, '')))
+const names = new Set(Object.keys(Colors).map((key) => key.replace(/\d$/g, '')))
 
 names.delete('BLACK')
 names.delete('WHITE')
 
 /** @type {{ black: string, white: string, [key: string]: { [key in 1|2|3|4|5]: string } }} */
-let blueprintColors = {
+const blueprintColors = {
   black: Colors.BLACK,
   white: Colors.WHITE,
 }
 
-for (const name of names) {
-  let o = {}
+names.forEach((name) => {
+  const o = {}
   for (let i = 1; i <= 5; i++) {
-    let key = `${name}${i}`
+    const key = `${name}${i}`
     o[i] = Colors[key]
   }
   blueprintColors[name.toLowerCase().replaceAll('_', '')] = o
-}
+})
 
-/** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
   content: ['./components/**/*.tsx', './pages/**/*.tsx', './styles/**/*.scss'],
   darkMode: 'class',

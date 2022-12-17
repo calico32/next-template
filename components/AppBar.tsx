@@ -1,8 +1,7 @@
 import { Navbar, Tag } from '@blueprintjs/core'
-import React from 'react'
 import Wrapper from './Wrapper'
 
-const AppBar: React.VFC = () => {
+const AppBar = (): JSX.Element => {
   return (
     <Navbar className="!shadow-none">
       <Wrapper className="mx-auto">

@@ -1,10 +1,9 @@
 import { Button, Classes, Menu, MenuItem, Navbar } from '@blueprintjs/core'
 import { Popover2 } from '@blueprintjs/popover2'
-import React from 'react'
 import { useToaster } from '../util/context'
 import Wrapper from './Wrapper'
 
-const ActionBar: React.VFC = () => {
+const ActionBar = (): JSX.Element => {
   const toaster = useToaster()
 
   return (

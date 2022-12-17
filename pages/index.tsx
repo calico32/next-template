@@ -1,7 +1,6 @@
 import { Button, H1 } from '@blueprintjs/core'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import React from 'react'
 import ActionBar from '../components/ActionBar'
 import AppBar from '../components/AppBar'
 import Hero from '../components/Hero'
